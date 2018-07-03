@@ -21,7 +21,6 @@ public class HashTableDS {
 		ht.put(2, "Orange");
 		ht.put(3, "Banana");
 		
-		Enumeration e = ht.keys();
 		System.out.println("Values in the hashtable 1:: " + ht.values());
 		
 		System.out.print("Values in the hashtable 2:: ");
@@ -33,6 +32,22 @@ public class HashTableDS {
 		
 		Set s = ht.entrySet();
 		System.out.println("Values in the hashtable 3:: " + s);
+		
+		String[] colors = new String[] {"Red", "Black", "white"};
+		Hashtable<Integer, String> ht2 = new Hashtable<>();
+		int i = 1;
+		for(String color : colors) {
+			ht2.put(i, color);
+			i++;
+		}
+		System.out.println("***Colors***");
+		Enumeration<String> col = ht2.elements();
+		while(col.hasMoreElements()) {
+			System.out.println(col.nextElement());
+		}
+		
 	}
-
+	
 }
+
+
