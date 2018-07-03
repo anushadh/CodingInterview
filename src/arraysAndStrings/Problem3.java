@@ -4,7 +4,7 @@ public class Problem3 {
 	
 	public static void main(String args[]) {
 		
-		String str = "";
+		String str = "zxz";
 		//str =  str.toLowerCase();
 		StringBuilder newString = new StringBuilder();
 		

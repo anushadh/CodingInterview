@@ -20,6 +20,7 @@ public class CountFrequency {
 		countFrequency2(list);
 		System.out.println("****************");
 		countFrequency3(list);
+		
 	}
 	
 	static void countFrequency1(List<String> list) {
