@@ -5,12 +5,13 @@ public class Queue {
 	int count = -1;
 	
 	public void enqueue(int element) {
+		count++;
 		if(count > 4) {
 			System.out.println("Queue is full");
 		} else {
-			count++;
 			array[count] = element;			
 		}
+		printQueue();
 	}
 	
 	public int dequeue() throws Exception {
@@ -21,24 +22,37 @@ public class Queue {
 			int element = array[0];
 			for(int i = 0; i < count; i++) {
 				array[i] = array[i+1];
-			}	
+			}
+			array[count] = -1;
+			count--;
+			printQueue();
 			return element;
 		}		
 	}
 	
 	public void printQueue() {
-		for(int i = 0; i < array.length; i++) {
-			System.out.print(array[i] + " ");
+		for(int i : array) {
+			System.out.print(i + " ");
 		}
+		System.out.println();
 	}
 	
-	public static void main(String args[]) {
+	public static void main(String args[]) throws Exception {
 		Queue q1 = new Queue();
 		q1.enqueue(10);
 		q1.enqueue(20);
 		q1.enqueue(30);
 		q1.enqueue(40);
-		q1.printQueue();
 		q1.enqueue(50);
+		q1.dequeue();
+		q1.enqueue(60);
+		q1.enqueue(70);
+		
+		q1.dequeue();
+		q1.dequeue();
+		q1.dequeue();
+		q1.dequeue();
+		q1.dequeue();
+		q1.dequeue();
 	}
 }

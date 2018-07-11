@@ -11,7 +11,7 @@ It is not ordered. It is not sychronized and allows null keys and values.
 public class HashMapDS {
 	
 	public static void main(String args[]) {
-		HashMap<Integer, String> hm = new HashMap();
+		HashMap<Integer, String> hm = new HashMap<>();
 		hm.put(1, "Ajith");
 		hm.put(2, "Ajay");
 		hm.put(3, "Anuj");
