@@ -20,7 +20,8 @@ public class Queue {
 		count--;
 		int element = -1;
 		if(count < 0) {
-			System.out.println("Queue is empty");
+			System.out.println("Queue is empty !");
+			return -1;
 		} else {
 			element = array[0];
 			for(int i = 0; i < count; i++) {
@@ -45,6 +46,7 @@ public class Queue {
 		queue.enqueue(10);
 		queue.enqueue(20);
 		queue.enqueue(30);
+		queue.dequeue();
 		queue.enqueue(40);
 		queue.enqueue(50);
 		queue.enqueue(60);
